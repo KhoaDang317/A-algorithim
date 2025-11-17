@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-// Sử dụng struct cho Node để có hiệu suất tốt hơn với các đối tượng nhỏ,
-// đặc biệt là tọa độ (value type)
 public class Node
 {
     public double x;
@@ -16,7 +14,6 @@ public class Node
     }
 }
 
-// Chỉnh sửa Edge: dùng thuộc tính chỉ đọc (get;) để đảm bảo tính bất biến
 public class Edge
 {
     public string To ;    // Node đích
@@ -56,7 +53,7 @@ public class Graph
 
 public static class Heuristic
 {
-    // Heuristic Euclidean: Tính khoảng cách đường chim bay giữa hai node
+    // dùng Heuristic Euclidean
     public static double Euclid(string a, string b, Dictionary<string, Node> pos)
     {
         // Truy cập Dictionary lấy tọa độ node
@@ -210,4 +207,5 @@ class Program
             }
         }
     }
+
 }
